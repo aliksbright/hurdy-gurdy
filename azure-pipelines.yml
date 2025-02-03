@@ -10,12 +10,12 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: Gradle@3
+- task: CmdLine@2
   inputs:
-    gradleWrapperFile: 'gradlew'  # Path to your Gradle wrapper
-    tasks: 'build'  # Replace with the tasks you want to run
-    options: '-Xmx3072m' 
-    publishJUnitResults: true
+    script: |
+      echo Write your commands here
+      
+      echo Hello world
     testResultsFiles: '**/TEST-*.xml'  # Updated pattern for test result files
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.11'  # Replace with your JDK version
